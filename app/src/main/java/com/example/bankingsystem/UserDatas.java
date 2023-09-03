@@ -107,13 +107,18 @@ public class UserDatas extends AppCompatActivity {
         dialog.getButton(AlertDialog.BUTTON_POSITIVE).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                if(mAmount.getText().toString().isEmpty()){
+
+                if(mAmount.getText().toString().isEmpty())
+                {
                     mAmount.setError("Amount can't be empty");
-                }else if(Double.parseDouble(mAmount.getText().toString()) > newbalance){
+                }
+                else if(Double.parseDouble(mAmount.getText().toString()) > newbalance){
                     mAmount.setError("Your account don't have enough balance");
-                }else if(Double.parseDouble(mAmount.getText().toString()) < 1) {
+                }
+                else if(Double.parseDouble(mAmount.getText().toString()) < 1) {
                     mAmount.setError("Enter amount atleast Rs.1");
-                }else{
+                }
+                else{
                     Intent intent = new Intent(UserDatas.this, SendToUser.class);
                     intent.putExtra("phonenumber", phoneNumber.getText().toString());
                     intent.putExtra("name", name.getText().toString());

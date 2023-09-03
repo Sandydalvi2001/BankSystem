@@ -33,8 +33,8 @@ public class CustomAdapterUserList extends RecyclerView.Adapter<ViewHolder> {
         ViewHolder viewHolder = new ViewHolder(itemView);
         viewHolder.setOnClickListener(new ViewHolder.ClickListener() {
             @Override
-            public void onItemClick(View view, int position) {
-
+            public void onItemClick(View view, int position)
+            {
                 UserList.nextActivity(position);
             }
         });
@@ -50,7 +50,8 @@ public class CustomAdapterUserList extends RecyclerView.Adapter<ViewHolder> {
     }
 
     @Override
-    public int getItemCount() {
+    public int getItemCount()
+    {
         return modelList.size();
     }
 }

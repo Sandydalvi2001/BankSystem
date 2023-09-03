@@ -17,7 +17,6 @@ public class DataBaseHelper extends SQLiteOpenHelper {
         super(context, "User.db", null, 1);
     }
 
-
     @Override
     public void onCreate(SQLiteDatabase db) {
         db.execSQL("create table "+TABLE_NAME+" (PHONENUMBER INTEGER PRIMARY KEY ,NAME TEXT,BALANCE DECIMAL,EMAIL VARCHAR,ACCOUNT_NO VARCHAR,IFSC_CODE VARCHAR)");
@@ -29,7 +28,6 @@ public class DataBaseHelper extends SQLiteOpenHelper {
         db.execSQL("insert into user_table values(9847515846,'Sumeet',2400.21,'sumeet@gmail.com','XXXXXXXXXXXX1231','BOB154215415')");
         db.execSQL("insert into user_table values(9958435468,'Ajay',9000.21,'ajay@gmail.com','XXXXXXXXXXXX1431','BOB154215115')");
         db.execSQL("insert into user_table values(9958473843,'Sai',6000.00,'sai@gmail.com','XXXXXXXXXXXX1132','BOB154215115')");
-
     }
 
     @Override
